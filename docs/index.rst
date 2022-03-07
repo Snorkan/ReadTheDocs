@@ -9,7 +9,7 @@ Hello!
 
 .. |version| image:: https://img.shields.io/badge/tag-v1.1-blue
 
-.. |docs| image:: https://img.shields.io/badge/docs-failing-red
+.. |docs| .. image:: 
 
 +--------------------------------------+
 | Table Headings                       |
