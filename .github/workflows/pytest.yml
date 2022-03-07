@@ -43,22 +43,10 @@ jobs:
         shell: bash -l {0}
         run: |
           conda activate testenv
-          pip install --no-cache-dir -r requirements-dev.txt
       # Run PyTest
       - name: Run PyTest
         id: pytest
         shell: bash -l {0}
         run: |
           conda activate testenv
-          py.test --cov-report=xml --cov=BALSAMIC -rsxv tests/*
-        env:
-          SENTIEON_LICENSE: dummy_license
-          SENTIEON_INSTALL_DIR: dummy_install_dir
-      # Run Codecov
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./coverage.xml
-          flags: unittests
-          fail_ci_if_error: true
+          pytest
