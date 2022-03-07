@@ -30,7 +30,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           activate-environment: testenv
-          environment-file: ReadTheDocs/environment.yaml
+          environment-file: environment.yaml
       # Install BALSAMIC
       - name: Install
         id: install
